@@ -1,0 +1,40 @@
+<html ng-app="usersApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users App</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+	<div ng-controller="UserController" ng-init="init()">
+        <div>
+            <button ng-click="controlFeed()">{{buttonLabel}}</button>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Timestamp</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.timestamp }}</td>
+                        <td>{{ user.role }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/app/app.js"></script>
+	<script src="js/app/controller.js"></script>
+	<script src="js/app/service.js"></script>
+</body>
+</html>
