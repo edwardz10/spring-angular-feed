@@ -20,7 +20,7 @@ controllerModule.controller('UserController', function($scope, $http, $interval,
             UserService.startFeed();
             $scope.buttonLabel = 'Stop feed';
 
-            $interval(callAtInterval, 2000);
+            $interval(feedUsersAtInterval, 2000);
 
         } else if ($scope.buttonLabel === 'Stop feed'){
             console.log('Stop feed');
